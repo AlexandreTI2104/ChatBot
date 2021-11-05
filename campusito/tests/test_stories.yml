@@ -5,87 +5,86 @@
 # - story: happy path 1
 #   steps:
 #   - user: |
-#       hello there!
+#       oi
 #     intent: greet
 #   - action: utter_greet
 #   - user: |
-#       amazing
+#       incrível
 #     intent: mood_great
 #   - action: utter_happy
 
 # - story: happy path 2
 #   steps:
 #   - user: |
-#       hello there!
+#       hey
 #     intent: greet
 #   - action: utter_greet
 #   - user: |
-#       amazing
+#       legal
 #     intent: mood_great
 #   - action: utter_happy
 #   - user: |
-#       bye-bye!
+#       tchau tchau
 #     intent: goodbye
 #   - action: utter_goodbye
 
 # - story: sad path 1
 #   steps:
 #   - user: |
-#       hello
+#       oi
 #     intent: greet
 #   - action: utter_greet
 #   - user: |
-#       not good
+#       não to bem
 #     intent: mood_unhappy
 #   - action: utter_cheer_up
 #   - action: utter_did_that_help
 #   - user: |
-#       yes
+#       sim
 #     intent: affirm
 #   - action: utter_happy
 
 # - story: sad path 2
 #   steps:
 #   - user: |
-#       hello
+#       oi
 #     intent: greet
 #   - action: utter_greet
 #   - user: |
-#       not good
+#       não to bem
 #     intent: mood_unhappy
 #   - action: utter_cheer_up
 #   - action: utter_did_that_help
 #   - user: |
-#       not really
+#       não
 #     intent: deny
 #   - action: utter_goodbye
 
-# - story: sad path 3
+# - story: perguntando ao bot
 #   steps:
 #   - user: |
-#       hi
+#       ola
 #     intent: greet
 #   - action: utter_greet
 #   - user: |
-#       very terrible
-#     intent: mood_unhappy
-#   - action: utter_cheer_up
-#   - action: utter_did_that_help
+#       tudo bem?
+#     intent: how_are_you
+#   - action: utter_how_are_you
 #   - user: |
-#       no
-#     intent: deny
+#       nao
+#     intent: deny 
 #   - action: utter_goodbye
 
-# - story: say goodbye
+# - story: diga tchau
 #   steps:
 #   - user: |
-#       bye-bye!
+#       tchau tchau
 #     intent: goodbye
 #   - action: utter_goodbye
 
-# - story: bot challenge
+# - story: desafiando o bot
 #   steps:
 #   - user: |
-#       are you a bot?
+#       vc é um bot?
 #     intent: bot_challenge
 #   - action: utter_iamabot

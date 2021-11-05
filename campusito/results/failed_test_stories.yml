@@ -1,0 +1,10 @@
+version: "2.0"
+stories:
+- story: perguntando ao bot (./tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: how_are_you
+  - action: utter_how_are_you  # predicted: utter_happy
+  - intent: deny  # predicted: how_are_you: nao
+  - action: utter_goodbye  # predicted: action_unlikely_intent

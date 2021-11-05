@@ -2,12 +2,17 @@ version: "2.0"
 
 rules:
 
-- rule: Diga tchau toda vez que o usuario disser tchau
+- rule: Diga tchau toda vez que o user disser tchau
   steps:
-  - intent: despedir
-  - action: action_despedir
+  - intent: goodbye
+  - action: utter_goodbye
 
-# - rule: Say 'I am a bot' anytime the user challenges
-#   steps:
-#   - intent: bot_challenge
-#   - action: utter_iamabot
+- rule: Diga eu sou um bot toda vez que o user desafiar
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Peca ao usuario para refazer a mensagem toda vez que houver uma dificuldade de entendimento
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default_nao_entendimento
