@@ -43,17 +43,43 @@ stories:
   - intent: pauta
   - action: utter_pauta
   - intent: anonimato
-  - action: utter_agradecimentos 
+  - action: utter_resp
   # - action: action_input_text
+  - action: utter_agradecimentos 
 
 - story: sugerir pauta 2
   steps: 
   - intent: sugestao
   - action: utter_sugestao
-  - intent: outras
-  - action: utter_agradecimentos
+  - intent: pauta
+  - action: utter_pauta
+  - intent: identificar
+  - action: utter_resp
   # - action: action_input_text
-  
+  - action: utter_agradecimentos
+
+
+- story: sugerir outras 1
+  steps: 
+  - intent: sugestao
+  - action: utter_sugestao
+  - intent: outras
+  - action: utter_outras
+  - intent: anonimato
+  - action: utter_resp
+  # - action: action_input_text
+  - action: utter_agradecimentos 
+
+- story: sugerir outras 2
+  steps: 
+  - intent: sugestao
+  - action: utter_sugestao
+  - action: utter_outras
+  - intent: identificar
+  - action: utter_resp
+  # - action: action_input_text
+  - action: utter_agradecimentos
+
 - story: informacao errada
   steps:
   - intent: info_incorreta
@@ -61,76 +87,147 @@ stories:
   # - action: action_input_text
   - action: utter_agradecimentos
 
-- story: reclamacao de reportagem
+- story: reclamacao de reportagem 1
   steps:
   - intent: reclamacao
+  - action: utter_reclamacoes
+  - intent: direito_a_replica
   - action: utter_direito_replica
   # - action: action_input_text
   - action: utter_agradecimentos
+  - intent: affirm
+  - action: utter_pergunta_identificacao
+  # - action: action_input_text
+  - action: utter_pergunta_contato
+  # - action: action_input_text
+  - action: utter_resposta_positiva_identificacao
+  - action: utter_final
+
+- story: reclamacao de reportagem 2
+  steps:
+  - intent: reclamacao
+  - action: utter_reclamacoes
+  - intent: info_incorreta
+  - action: utter_outro_motivo
+  # - action: action_input_text
+  - action: utter_agradecimentos
+  - intent: affirm
+  - action: utter_pergunta_identificacao
+  # - action: action_input_text
+  - action: utter_pergunta_contato
+  # - action: action_input_text
+  - action: utter_resposta_positiva_identificacao
+  - action: utter_final
+
+- story: reclamacao de reportagem 3
+  steps:
+  - intent: reclamacao
+  - action: utter_reclamacoes
+  - intent: erro_portugues
+  - action: utter_outro_motivo
+  # - action: action_input_text
+  - action: utter_agradecimentos
+  - intent: affirm
+  - action: utter_pergunta_identificacao
+  # - action: action_input_text
+  - action: utter_pergunta_contato
+  # - action: action_input_text
+  - action: utter_resposta_positiva_identificacao
+  - action: utter_final
+
+- story: reclamacao de reportagem 4
+  steps:
+  - intent: reclamacao
+  - action: utter_reclamacoes
+  - intent: problemas_tecnicos
+  - action: utter_problemas_tecnicos
+  # - action: action_input_text
+  - action: utter_agradecimentos
+  - intent: affirm
+  - action: utter_pergunta_identificacao
+  # - action: action_input_text
+  - action: utter_pergunta_contato
+  # - action: action_input_text
+  - action: utter_resposta_positiva_identificacao
+  - action: utter_final
+
+- story: reclamacao de reportagem 5
+  steps:
+  - intent: reclamacao
+  - action: utter_reclamacoes
+  - intent: outro_motivo
+  - action: utter_outro_motivo
+  # - action: action_input_text
+  - action: utter_agradecimentos
+  - intent: affirm
+  - action: utter_pergunta_identificacao
+  # - action: action_input_text
+  - action: utter_pergunta_contato
+  # - action: action_input_text
+  - action: utter_resposta_positiva_identificacao
+  - action: utter_final
+
+- story: reclamacao de reportagem 6
+  steps:
+  - intent: reclamacao
+  - action: utter_reclamacoes
+  - intent: direito_a_replica
+  - action: utter_direito_replica
+  # - action: action_input_text
+  - action: utter_agradecimentos
+  - intent: deny
+  - action: utter_resposta_negativa_identificacao
+  - action: utter_final
+
+- story: reclamacao de reportagem 7
+  steps:
+  - intent: reclamacao
+  - action: utter_reclamacoes
+  - intent: info_incorreta
+  - action: utter_outro_motivo
+  # - action: action_input_text
+  - action: utter_agradecimentos
+  - intent: deny
+  - action: utter_resposta_negativa_identificacao
+  - action: utter_final
+
+- story: reclamacao de reportagem 8
+  steps:
+  - intent: reclamacao
+  - action: utter_reclamacoes
+  - intent: erro_portugues
+  - action: utter_outro_motivo
+  # - action: action_input_text
+  - action: utter_agradecimentos
+  - intent: deny
+  - action: utter_resposta_negativa_identificacao
+  - action: utter_final
+
+- story: reclamacao de reportagem 9
+  steps:
+  - intent: reclamacao
+  - action: utter_reclamacoes
+  - intent: problemas_tecnicos
+  - action: utter_problemas_tecnicos
+  # - action: action_input_text
+  - action: utter_agradecimentos
+  - intent: deny
+  - action: utter_resposta_negativa_identificacao
+  - action: utter_final
+
+- story: reclamacao de reportagem 10
+  steps:
+  - intent: reclamacao
+  - action: utter_reclamacoes
+  - intent: outro_motivo
+  - action: utter_outro_motivo
+  # - action: action_input_text
+  - action: utter_agradecimentos
+  - intent: deny
+  - action: utter_resposta_negativa_identificacao
+  - action: utter_final
 
 - story: volta do servico
   steps:
   - intent: volta_servico
   - action: utter_dia_retorno
-  
-# - story:
-#   steps:
-#   - intent:
-#   - action:
-  
-# - story:
-#   steps:
-#   - intent:
-#   - action:
-  
-# - story:
-#   steps:
-#   - intent:
-#   - action:
-  
-# - story:
-#   steps:
-#   - intent:
-#   - action:
-  
-# - story:
-#   steps:
-#   - intent:
-#   - action:
-  
-# - story:
-#   steps:
-#   - intent:
-#   - action:
-  
-# - story:
-#   steps:
-#   - intent:
-#   - action:
-  
-# - story:
-#   steps:
-#   - intent:
-#   - action:
-  
-# - story:
-#   steps:
-#   - intent:
-#   - action:
-  
-# - story:
-#   steps:
-#   - intent:
-#   - action:
-
-# - story:
-#   steps:
-#   - intent:
-#   - action:
-  
-# - story:
-#   steps:
-#   - intent:
-#   - action:
-  
-  

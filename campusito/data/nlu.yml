@@ -59,6 +59,7 @@ nlu:
 - intent: deny
   examples: |
     - não
+    - nao
     - n
     - nunca
     - acho que não
@@ -116,10 +117,22 @@ nlu:
     - qual o sua sugestão?
     - sugestão de pauta
     - sugerir pauta
-    - sugiro uma pauta
-
+    - sugiro uma 
+    
+- intent: direito_a_replica
+  examples: |
+    - direito a replica
+    - direito de replica
+    - direito de réplica
+    - direito
+    - replica
+    - direito a réplica
+    - sugestão de direito a réplica 
+    - sugestao de direito a replica 
+    
 - intent: sugestao
   examples: |
+    - sugestao
     - minha sugestão
     - sugerir
     - sugestão
@@ -127,7 +140,9 @@ nlu:
 
 - intent: problemas_tecnicos
   examples: |
-    - problema técnico
+    - problema 
+    - problemas tecnicos
+    - problemas técnicos
     - problema
     - técnico
     - erro
@@ -203,3 +218,4 @@ nlu:
     - gostaria de saber quando volta
     - volta do servico
     - volta do atendimento
+  
