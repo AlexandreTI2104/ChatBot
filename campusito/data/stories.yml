@@ -74,6 +74,7 @@ stories:
   steps: 
   - intent: sugestao
   - action: utter_sugestao
+  - intent: outras
   - action: utter_outras
   - intent: identificar
   - action: utter_resp
@@ -124,7 +125,7 @@ stories:
   - intent: reclamacao
   - action: utter_reclamacoes
   - intent: erro_portugues
-  - action: utter_outro_motivo
+  - action: utter_erro_portugues
   # - action: action_input_text
   - action: utter_agradecimentos
   - intent: affirm
@@ -196,7 +197,7 @@ stories:
   - intent: reclamacao
   - action: utter_reclamacoes
   - intent: erro_portugues
-  - action: utter_outro_motivo
+  - action: utter_erro_portugues
   # - action: action_input_text
   - action: utter_agradecimentos
   - intent: deny

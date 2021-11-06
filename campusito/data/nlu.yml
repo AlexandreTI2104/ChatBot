@@ -132,6 +132,9 @@ nlu:
     
 - intent: sugestao
   examples: |
+    - gostaria de fazer uma sugestão
+    - quero fazer uma sugestão
+    - gostaria de fazer uma sugestao
     - sugestao
     - minha sugestão
     - sugerir
@@ -140,6 +143,8 @@ nlu:
 
 - intent: problemas_tecnicos
   examples: |
+    - Problemas Técnicos
+    - Problemas técnicos
     - problema 
     - problemas tecnicos
     - problemas técnicos
@@ -158,6 +163,7 @@ nlu:
     - corrigir
     - correções
     - correção
+    - Correções
 
 - intent: erro_portugues
   examples: |
@@ -179,6 +185,7 @@ nlu:
 - intent: reclamacao
   examples: |
     - gostaria de fazer uma reclamacao
+    - Reclamações
     - reclamacao
     - reclamação
     - reclamar

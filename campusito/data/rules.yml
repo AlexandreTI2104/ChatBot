@@ -7,7 +7,7 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Diga eu sou um bot toda vez que o user desafiar
+- rule: Diga eu sou o campusito toda vez que o user desafiar
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
@@ -16,3 +16,4 @@ rules:
   steps:
   - intent: nlu_fallback
   - action: utter_default_nao_entendimento
+
